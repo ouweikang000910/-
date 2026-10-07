@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=1280,height=720"><title>人物竖卡转场 · 动效示意</title><script src="assets/gsap.min.js"></script><style>html,body{margin:0;width:100%;height:100%;overflow:hidden}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:system-ui,sans-serif;color:#fff;background:#020714}
+.scene{position:absolute;inset:0;overflow:hidden}.dark-field{position:absolute;inset:0;background:radial-gradient(ellipse at 53% 75%,#0a2534 0,#030919 43%,#01040d 90%)}
+#room{position:absolute;inset:0;background:linear-gradient(100deg,#92765b,#ddd2ba 46%,#bdaf91);overflow:hidden}.wall-light{position:absolute;inset:0;background:linear-gradient(100deg,transparent 25%,#fff5de44 40%,transparent 58%)}
+.painting{position:absolute;left:880px;top:276px;width:290px;height:350px;overflow:hidden;border:8px solid #403d3c;box-shadow:0 10px 22px #0005}.painting svg{width:100%;height:100%}
+#card,#glow{position:absolute;left:350px;top:54px;width:580px;height:666px;border-radius:50px}
+#card{overflow:hidden;background:#041224;border:2px solid #90cddd77;box-sizing:border-box}#mesh{position:absolute;left:-18px;top:-18px;width:620px;height:720px;object-fit:cover}.card-sheen{position:absolute;inset:0;border-radius:48px;box-shadow:inset 0 0 20px #73d5f523}
+#glow{border:2px solid #d6faff80;box-shadow:0 0 26px 9px #80d6e64a,0 0 60px 14px #61cce21f;box-sizing:border-box}
+#subject{position:absolute;left:370px;top:122px;width:540px;height:738px;transform-origin:50% 0%}#subject img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 1px #d0e7e59c)}
+#title{position:absolute;left:516px;top:76px;width:248px;height:105px;display:flex;align-items:center;justify-content:center;border-radius:19px;background:#495354cc;color:#a5e62c;font-size:62px;font-weight:900;letter-spacing:1px;text-shadow:2px 4px 4px #020a09;transform-origin:50% 50%}
+#callout{position:absolute;left:846px;top:396px;width:300px;height:72px;display:flex;align-items:center;justify-content:center;white-space:nowrap;color:#a5e72c;font-size:59px;font-weight:900;letter-spacing:1px;text-shadow:2px 3px 3px #06110d;transform-origin:50% 50%}
+#captions{position:absolute;left:50px;bottom:67px;width:1180px;height:58px;text-align:center;font-weight:800;font-size:38px;line-height:58px;text-shadow:0 2px 2px #000,2px 0 2px #000,-2px 0 2px #000,0 -2px 2px #000}#captions>div{position:absolute;inset:0}
+#ambient{position:absolute;inset:0}.particle{position:absolute;border-radius:50%;background:#e2c75f;box-shadow:0 0 7px 2px #e7cc6655}
+</style></head><body><div data-hf-id="hf-h3v3" id="root" data-composition-id="portrait-effect" data-start="0" data-width="1280" data-height="720" data-duration="7.7766667">
+ <section data-hf-id="hf-034y" id="scene" class="scene">
+  <div data-hf-id="hf-d7f3" class="dark-field"></div>
+  <div data-hf-id="hf-611c" id="room" data-library-layer="room"><div data-hf-id="hf-5ajz" class="wall-light"></div><div data-hf-id="hf-k7a4" class="painting"><svg data-hf-id="hf-031r" viewBox="0 0 230 290"><rect data-hf-id="hf-ggnk" width="230" height="290" fill="#7998ad" /><path data-hf-id="hf-kaej" d="M7 277 Q42 191 88 182 L164 173 Q210 207 223 285" fill="#d34f38" /><path data-hf-id="hf-x1b3" d="M78 198 92 94 156 94 166 181 Q131 225 78 198" fill="#e9b675" /><path data-hf-id="hf-v1cp" d="M65 111 Q42 60 81 26 Q164 -3 181 74 L170 136 147 99 146 69 97 72 78 138Z" fill="#df7029" /><path data-hf-id="hf-6yl7" d="M117 118 Q122 98 132 116 M93 108 111 107 M139 107 156 105" stroke="#51516c" stroke-width="4" fill="none" /><path data-hf-id="hf-hmjw" d="M112 148 139 143" stroke="#bd5c54" stroke-width="4" /></svg></div></div>
+  <div data-hf-id="hf-0454" id="ambient" data-library-layer="ambient"><i data-hf-id="hf-fmnj" class="particle" style="left:64px;top:63px;width:2px;height:2px"></i><i data-hf-id="hf-to8g" class="particle" style="left:201px;top:274px;width:3px;height:3px"></i><i data-hf-id="hf-35vr" class="particle" style="left:338px;top:485px;width:4px;height:4px"></i><i data-hf-id="hf-juch" class="particle" style="left:475px;top:696px;width:5px;height:5px"></i><i data-hf-id="hf-aw59" class="particle" style="left:612px;top:187px;width:2px;height:2px"></i><i data-hf-id="hf-0ky2" class="particle" style="left:749px;top:398px;width:3px;height:3px"></i><i data-hf-id="hf-e4ap" class="particle" style="left:886px;top:609px;width:4px;height:4px"></i><i data-hf-id="hf-io63" class="particle" style="left:1023px;top:100px;width:5px;height:5px"></i><i data-hf-id="hf-mlub" class="particle" style="left:1160px;top:311px;width:2px;height:2px"></i><i data-hf-id="hf-92ox" class="particle" style="left:17px;top:522px;width:3px;height:3px"></i><i data-hf-id="hf-qqiq" class="particle" style="left:154px;top:13px;width:4px;height:4px"></i><i data-hf-id="hf-rky0" class="particle" style="left:291px;top:224px;width:5px;height:5px"></i><i data-hf-id="hf-57y0" class="particle" style="left:428px;top:435px;width:2px;height:2px"></i><i data-hf-id="hf-veza" class="particle" style="left:565px;top:646px;width:3px;height:3px"></i><i data-hf-id="hf-wdr0" class="particle" style="left:702px;top:137px;width:4px;height:4px"></i><i data-hf-id="hf-p8u9" class="particle" style="left:839px;top:348px;width:5px;height:5px"></i><i data-hf-id="hf-hi5x" class="particle" style="left:976px;top:559px;width:2px;height:2px"></i><i data-hf-id="hf-ci6z" class="particle" style="left:1113px;top:50px;width:3px;height:3px"></i><i data-hf-id="hf-alw5" class="particle" style="left:1250px;top:261px;width:4px;height:4px"></i><i data-hf-id="hf-0jyz" class="particle" style="left:107px;top:472px;width:5px;height:5px"></i><i data-hf-id="hf-07bj" class="particle" style="left:244px;top:683px;width:2px;height:2px"></i><i data-hf-id="hf-q3rq" class="particle" style="left:381px;top:174px;width:3px;height:3px"></i><i data-hf-id="hf-mwuu" class="particle" style="left:518px;top:385px;width:4px;height:4px"></i><i data-hf-id="hf-72cg" class="particle" style="left:655px;top:596px;width:5px;height:5px"></i><i data-hf-id="hf-o2t7" class="particle" style="left:792px;top:87px;width:2px;height:2px"></i><i data-hf-id="hf-m0tt" class="particle" style="left:929px;top:298px;width:3px;height:3px"></i><i data-hf-id="hf-w8b5" class="particle" style="left:1066px;top:509px;width:4px;height:4px"></i><i data-hf-id="hf-505w" class="particle" style="left:1203px;top:0px;width:5px;height:5px"></i></div>
+  <div data-hf-id="hf-iejw" id="glow" data-library-layer="glow"></div>
+  <div data-hf-id="hf-63x9" id="card" data-library-layer="card" data-layout-allow-overflow=""><img data-hf-id="hf-0a6e" id="mesh" src="assets/tech-mesh.svg" alt="" data-layout-allow-overflow=""><div data-hf-id="hf-l23a" class="card-sheen"></div></div>
+  <div data-hf-id="hf-m83h" id="subject" data-library-layer="subject" data-layout-allow-overflow=""><img data-hf-id="hf-qpst" src="assets/person.svg" alt="人物分层示意"></div>
+  <div data-hf-id="hf-9oy4" id="title" data-library-layer="title">商用AI</div>
+  <div data-hf-id="hf-tivu" id="callout" data-library-layer="callout">价格昂贵</div>
+  <div data-hf-id="hf-81uw" id="captions" data-library-layer="captions" data-layout-allow-caption-zone=""><div data-hf-id="hf-27ec" id="cap1">首先为什么在本地电脑跑AI视频呢</div><div data-hf-id="hf-n6qo" id="cap2">现在很多商用AI视频</div><div data-hf-id="hf-z93x" id="cap3">生成模型价格非常昂贵</div><div data-hf-id="hf-nebp" id="cap4">秒要一块多</div></div>
+ </section>
+</div><script>
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true});
+tl.addLabel('card-rise',2.65).addLabel('subject-fit',3.12).addLabel('room-fade',3.18).addLabel('title-pop',3.43).addLabel('price-reveal',5.88);
+tl.fromTo('#card',{y:520,opacity:0},{y:0,opacity:1,duration:.51,ease:'power3.out'},2.65);
+tl.to('#subject',{scale:.82,y:76,duration:.43,ease:'power2.inOut'},3.12);
+tl.to('#room',{opacity:0,duration:.57,ease:'power1.inOut'},3.18);
+tl.fromTo('#glow',{y:0,opacity:0},{opacity:1,duration:.4,ease:'power1.out'},3.25);
+tl.fromTo('#title',{scale:.1,opacity:0},{scale:1,opacity:1,duration:.25,ease:'power3.out'},3.43);
+tl.fromTo('#callout',{scaleY:.03,opacity:0},{scaleY:1,opacity:1,duration:.16,ease:'power2.out'},5.88);
+tl.fromTo('#ambient',{opacity:0},{opacity:1,duration:.5},3.25);
+document.querySelectorAll('.particle').forEach((p,i)=>{
+ tl.fromTo(p,{y:14,opacity:.13+(i%3)*.13},{y:-22-(i%5)*9,opacity:.22+(i%5)*.1,duration:4.52,ease:'none'},3.25);
+});
+tl.to('#mesh',{x:16,y:-12,duration:5.12,ease:'none'},2.65);
+tl.set('#cap1',{opacity:1},0).set(['#cap2','#cap3','#cap4'],{opacity:0},0);
+tl.set('#cap1',{opacity:0},3.2).set('#cap2',{opacity:1},3.2);
+tl.set('#cap2',{opacity:0},4.84).set('#cap3',{opacity:1},4.84);
+tl.set('#cap3',{opacity:0},6.61).set('#cap4',{opacity:1},6.61);
+window.__timelines['portrait-effect']=tl;
+</script></body></html>

@@ -1,0 +1,13 @@
+{
+  "name": "motion-effect-library",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "中文视频动效拆解库：离线交互预览、分层控制和可编辑 HyperFrames 合成。",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "npx --yes hyperframes@0.8.139 check render-project",
+    "studio": "npx --yes hyperframes@0.8.139 preview render-project --background",
+    "render": "npx --yes hyperframes@0.8.139 render render-project --quality delivery --fps 30 --output renders/portrait-card.mp4"
+  }
+}

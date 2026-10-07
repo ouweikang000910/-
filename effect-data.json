@@ -1,0 +1,104 @@
+{
+  "source": "录屏2026-10-07 17.12.35.mov",
+  "duration": 7.7766666667,
+  "audio": false,
+  "method": "录屏视觉分析；时间为近似值，误差约 ±0.05 秒；曲线与数值为示意复现建议，不是原工程参数。",
+  "effects": [
+    {
+      "id": "card",
+      "name": "竖卡从下方升起",
+      "start": 2.65,
+      "end": 3.16,
+      "color": "#82d9ee",
+      "tag": "位置 · 圆角 · 遮罩",
+      "description": "圆角科技背景先在人物身后出现，从画面底部上升，宽度基本保持稳定，最后停在中央。人物始终位于它前面。",
+      "params": "复现：Y +520 → 0 px；透明度 0 → 1；约 0.51 s；power3.out。卡片宽 46%、高 92%，圆角约 5%。",
+      "layer": "card",
+      "range": [
+        2.4,
+        3.35
+      ],
+      "code": "tl.fromTo(\"#card\", {y:520, opacity:0},\n  {y:0, opacity:1, duration:.51, ease:\"power3.out\"}, 2.65);"
+    },
+    {
+      "id": "subject",
+      "name": "人物缩小，落入卡内",
+      "start": 3.12,
+      "end": 3.55,
+      "color": "#bea4f9",
+      "tag": "抠像 · 缩放 · 前景",
+      "description": "人物从原场景中的大半身画面，缩小到竖卡内部；科技背景替换人物身后的室内背景。人物边缘存在柔和的浅色轮廓。",
+      "params": "复现：人物 scale 1 → 0.82；Y 0 → 76 px；约 0.43 s；power2.inOut。实际复用需先抠像或有透明人物素材。",
+      "layer": "subject",
+      "range": [
+        2.95,
+        3.75
+      ],
+      "code": "tl.to(\"#subject\", {scale:.82, y:76,\n  duration:.43, ease:\"power2.inOut\"}, 3.12);"
+    },
+    {
+      "id": "room",
+      "name": "原背景淡出，辉光留住主体",
+      "start": 3.18,
+      "end": 3.75,
+      "color": "#68acdc",
+      "tag": "合成 · 淡出 · 辉光",
+      "description": "竖卡基本到位后，卡外原场景逐渐变暗并被深色背景接替。卡片边缘出现蓝白色的柔光，将主体从暗场中分离。",
+      "params": "复现：室内背景 opacity 1 → 0，约 0.57 s；辉光约 24–42 px，亮度与背景接替同步。不是整幅画面一起压暗。",
+      "layer": "room",
+      "range": [
+        3.05,
+        3.9
+      ],
+      "code": "tl.to(\"#room\", {opacity:0, duration:.57}, 3.18);\ntl.fromTo(\"#glow\", {opacity:0},\n  {opacity:1, duration:.4}, 3.25);"
+    },
+    {
+      "id": "title",
+      "name": "顶部标签由小到大出现",
+      "start": 3.43,
+      "end": 3.68,
+      "color": "#b2ef38",
+      "tag": "缩放 · 透明度 · 标签",
+      "description": "灰色半透明底板与绿色“商用AI”一起放大出现，停在卡片顶部。文字与底板作为一组运动，不是逐字打字。",
+      "params": "复现：scale 0.1 → 1，opacity 0 → 1；约 0.25 s；power3.out。原片未观察到明显大幅回弹。",
+      "layer": "title",
+      "range": [
+        3.25,
+        4.05
+      ],
+      "code": "tl.fromTo(\"#title\", {scale:.1, opacity:0},\n  {scale:1, opacity:1, duration:.25, ease:\"power3.out\"}, 3.43);"
+    },
+    {
+      "id": "callout",
+      "name": "右侧关键词纵向展开",
+      "start": 5.88,
+      "end": 6.04,
+      "color": "#d1fa57",
+      "tag": "纵向缩放 · 关键词",
+      "description": "“价格昂贵”先表现为很薄的一条横向文字，再迅速恢复正常高度，位置在人物右侧，并部分跨过卡片边缘。",
+      "params": "复现：scaleY 0.03 → 1；opacity 0 → 1；约 0.16 s；power2.out。无需额外横向飞入。",
+      "layer": "callout",
+      "range": [
+        5.65,
+        6.45
+      ],
+      "code": "tl.fromTo(\"#callout\", {scaleY:.03, opacity:0},\n  {scaleY:1, opacity:1, duration:.16, ease:\"power2.out\"}, 5.88);"
+    },
+    {
+      "id": "ambient",
+      "name": "科技纹理与稀疏粒子",
+      "start": 3.25,
+      "end": 7.77,
+      "color": "#e5c576",
+      "tag": "背景素材 · 低速漂移",
+      "description": "竖卡内有斜向蓝色科技纹理，卡外深色场景有零散金色亮点。它们提供空间感，运动幅度低于人物与标签。",
+      "params": "示意复现：固定种子粒子，小幅上漂与透明度变化；蓝色网格缓慢位移。原片具体素材、插件与噪声算法不可从录屏确定。",
+      "layer": "ambient",
+      "range": [
+        3.25,
+        7.77
+      ],
+      "code": "// 所有粒子位置由固定索引生成，可任意拖动时间。\ntl.to(\".particle\", {y:-32, duration:4.5, ease:\"none\"}, 3.25);"
+    }
+  ]
+}

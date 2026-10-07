@@ -1,0 +1,18 @@
+<svg viewBox="0 0 410 560" xmlns="http://www.w3.org/2000/svg" aria-label="用于演示分层的人物插画"><defs><linearGradient id="skin" x1="0" x2="1"><stop stop-color="#ba8465"/><stop offset=".4" stop-color="#e5b290"/><stop offset="1" stop-color="#c48b6b"/></linearGradient><linearGradient id="tee" x2=".6" y2="1"><stop stop-color="#282c32"/><stop offset="1" stop-color="#0d1117"/></linearGradient></defs>
+<path d="M84 557 79 305 Q83 268 129 250 L156 242 254 242 282 250 Q329 264 338 306 L343 560Z" fill="url(#tee)"/>
+<path d="M179 196 175 246 Q203 279 232 246 L231 194Z" fill="url(#skin)"/>
+<ellipse cx="139" cy="132" rx="13" ry="23" fill="#bb866b"/><ellipse cx="266" cy="132" rx="13" ry="23" fill="#cc9878"/>
+<path d="M139 73 Q145 25 199 22 Q263 23 267 86 L264 150 Q260 197 204 221 Q151 203 143 155Z" fill="url(#skin)"/>
+<path d="M136 109 Q122 58 149 34 Q188 3 235 22 Q282 25 272 101 L259 108 256 67 Q216 87 162 67 L152 115Z" fill="#171a20"/>
+<path d="M146 55 Q190 12 244 37" fill="none" stroke="#303238" stroke-width="10"/>
+<g fill="#18202a" fill-opacity=".05" stroke="#151922" stroke-width="5"><rect x="149" y="104" width="47" height="36" rx="13"/><rect x="215" y="104" width="47" height="36" rx="13"/><path d="M196 115 Q205 110 215 116 M137 108 149 113 M263 112 272 107" fill="none"/></g>
+<ellipse cx="176" cy="122" rx="3" ry="4" fill="#1d1b1c"/><ellipse cx="238" cy="122" rx="3" ry="4" fill="#1d1b1c"/>
+<path d="M204 126 197 153 208 155" stroke="#a97860" fill="none" stroke-width="3"/><path d="M181 175 Q207 192 231 174 Q206 207 181 175" fill="#884f48"/><path d="M185 179 228 178" stroke="#f5d9c0" stroke-width="4"/>
+<path d="M162 243 Q204 277 247 243" stroke="#43454b" stroke-width="3" fill="none"/>
+<rect x="204" y="278" width="15" height="21" rx="6" fill="#4b5059"/><circle cx="211" cy="285" r="3" fill="#a7a6a7"/>
+<path d="M95 308 Q60 324 69 394 L110 474 Q136 495 165 468 L202 431 183 408 147 430 113 352Z" fill="url(#skin)"/>
+<path d="M316 310 Q351 333 337 403 L307 463 Q288 493 254 472 L205 440 224 411 273 436 294 358Z" fill="url(#skin)"/>
+<path d="M160 452 175 419 Q192 409 211 418 L238 429 Q248 442 232 450 L206 445 191 464Z" fill="#dcaa88"/>
+<path d="M270 450 248 424 219 410 Q205 410 200 418 L228 437 242 461Z" fill="#e1af8c"/>
+<path d="M82 305 121 288 140 346 98 372 76 337Z M284 287 326 304 339 340 299 374 277 344Z" fill="url(#tee)"/>
+</svg>

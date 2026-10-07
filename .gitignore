@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+**/.hyperframes/
+**/.media/
+**/.thumbnails/
+**/snapshots/
+renders/
+work/
+*.mov
+*.mp4
+*.zip
