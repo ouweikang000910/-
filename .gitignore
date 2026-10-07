@@ -11,4 +11,6 @@ renders/
 work/
 *.mov
 *.mp4
+!shots/**/*.mp4
+!shots/**/*.mov
 *.zip
