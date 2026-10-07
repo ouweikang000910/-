@@ -5,7 +5,6 @@
  if(migrateLegacyLink())return;
  const $=s=>document.querySelector(s);
  const repo=`https://github.com/${cfg.owner}/${cfg.repository}`;
- const api=`https://api.github.com/repos/${cfg.owner}/${cfg.repository}/git/trees/${cfg.branch}?recursive=1`;
  const key=`shot-library:${cfg.owner}/${cfg.repository}`;
  const mediaPattern=/\.(mp4|webm|m4v|mov|png|jpe?g|webp|gif)$/i;
  const videoPattern=/\.(mp4|webm|m4v|mov)$/i;
@@ -21,7 +20,7 @@
   return tree.filter(e=>e.type==='blob'&&e.path.startsWith(cfg.folder+'/')&&mediaPattern.test(e.path)).map(e=>{
    const meta=cfg.metadata[e.path]||{};
    const parts=e.path.split('/');const filename=parts.at(-1);const video=videoPattern.test(filename);
-   return {path:e.path,filename,title:meta.title||filename.replace(/\.[^.]+$/,'').replace(/[_-]/g,' '),category:meta.category||(parts.length>2?parts[1]:'未分类'),tags:Array.isArray(meta.tags)?meta.tags.filter(t=>typeof t==='string'):[],description:meta.description||'',cover:meta.cover||'',duration:meta.duration,size:e.size||0,type:video?'video':'image',sample:!!meta.sample,effect:meta.effect||''};
+   return {path:e.path,filename,title:meta.title||filename.replace(/\.[^.]+$/,'').replace(/[_-]/g,' '),category:meta.category||(parts.length>2?parts[1]:'未分类'),tags:Array.isArray(meta.tags)?meta.tags.filter(t=>typeof t==='string'):[],description:meta.description||'',cover:meta.cover||'',duration:meta.duration,size:e.size||meta.size||0,type:video?'video':'image',sample:!!meta.sample,effect:meta.effect||''};
   });
  }
  function filtered(){
@@ -95,8 +94,8 @@
  async function sync(){
   $('#sync').disabled=true;status('正在同步仓库中的镜头…');
   try{
-   const endpoint=location.hostname==='127.0.0.1'||location.hostname==='localhost'?'/api/shot-tree':api;
-   const response=await fetch(endpoint,{headers:{Accept:'application/vnd.github+json'},cache:'no-store',signal:AbortSignal.timeout(15000)});
+   const endpoint=location.hostname==='127.0.0.1'||location.hostname==='localhost'?'/api/shot-tree':new URL('library-index.json',location.href).href;
+   const response=await fetch(endpoint,{headers:{Accept:'application/json'},cache:'no-store',signal:AbortSignal.timeout(15000)});
    if(!response.ok)throw new Error('sync');const data=await response.json();if(data.truncated||!Array.isArray(data.tree))throw new Error('incomplete');
    items=convert(data.tree);try{localStorage.setItem(key,JSON.stringify({tree:data.tree.filter(e=>e.path.startsWith(cfg.folder+'/')),time:Date.now()}));}catch{}
    render();showDeepLink();status('镜头已同步 · 保存于 GitHub 仓库');

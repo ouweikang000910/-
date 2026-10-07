@@ -18,9 +18,9 @@
 
 支持 MP4 / WebM / MOV / M4V / PNG / JPG / WebP / GIF，视频推荐 H.264 编码的 MP4。网页上传每个文件最多 25 MiB，GitHub Pages 发布站点最大为 1 GB，适合短片段收藏。[上传限制](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository)、[站点限制](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)。
 
-网页直接读取公开仓库中的 `shots/` 文件目录，保存素材后会自动发现新条目，无需逐条登记。把素材存入 `shots/分类名/文件.mp4` 即可按文件夹分类；自定义标题、标签和封面可参考 `library-config.js`。读取失败时显示上次保存的目录，并提供重新同步入口。
+GitHub Pages 每次发布时会根据 `shots/` 中的素材自动生成 `library-index.json`。网页从同一站点读取目录，保存素材并完成发布后会自动发现新条目，无需逐条登记，也无需访问 GitHub API。把素材存入 `shots/分类名/文件.mp4` 即可按文件夹分类；自定义标题、标签和封面可参考 `library-config.js`。读取失败时显示上次保存的目录，并提供重新同步入口。
 
-GitHub Pages 从 `main` 分支根目录发布，更新代码或素材并推送后即可自动更新。`.nojekyll` 保留原始静态文件。旧版带时间轴的分享链接会自动跳转到动效拆解页。
+GitHub Pages 从 `main` 分支根目录发布，更新代码或素材并推送后即可自动更新。`_config.yml` 与 `library-index.json` 使用 GitHub Pages 自带的 Jekyll 构建来生成镜头目录。旧版带时间轴的分享链接会自动跳转到动效拆解页。
 
 ## 本地预览
 
@@ -65,7 +65,8 @@ shots/                           实际存放自己的视频和画面
 effect.html                      单镜头动效拆解、时间轴与分层控制
 assets/shots/                    四张插画分镜
 assets/favicon.svg               网页图标
-.nojekyll                        GitHub Pages 静态发布配置
+_config.yml                      GitHub Pages 目录生成配置
+library-index.json               发布时自动生成的镜头目录模板
 effect-data.json                 六项动效说明、时间、建议参数及代码片段
 render-project/index.html        可编辑、可渲染的合成主体
 render-project/index.motion.json 动效出现时刻断言

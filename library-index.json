@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /library-index.json
+---
+{
+  "tree": [
+    {%- assign comma = "" -%}
+    {%- for file in site.static_files -%}
+      {%- assign folder = file.path | remove_first: "/" | split: "/" | first -%}
+      {%- if folder == "shots" -%}
+        {{ comma }}{"path": {{ file.path | remove_first: "/" | jsonify }}, "type": "blob"}
+        {%- assign comma = "," -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ],
+  "truncated": false
+}

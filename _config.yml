@@ -1,0 +1,10 @@
+title: 我的镜头库
+url: https://ouweikang000910.github.io
+baseurl: /-
+exclude:
+  - README.md
+  - THIRD_PARTY_NOTICES.md
+  - package.json
+  - scripts
+  - render-project/AGENTS.md
+  - node_modules

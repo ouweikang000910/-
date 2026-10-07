@@ -12,6 +12,7 @@ window.SHOT_LIBRARY = {
       description: '7.78 秒的插画示意：竖卡升起、人物入卡、背景淡出、标签出现与关键词展开。',
       cover: 'assets/shots/04-emphasis.png',
       duration: 7.78,
+      size: 1762980,
       effect: 'effect.html',
       sample: true
     }
