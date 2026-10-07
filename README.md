@@ -2,6 +2,14 @@
 
 把参考视频中的动效拆成可回放、可慢放、可拖动时间轴的代码示例。当前条目是 **人物竖卡转场**，包含 6 项动效及分层开关。
 
+## 在线镜头展示
+
+**[打开视频动效库](https://ouweikang000910.github.io/-/)** · 无需下载或登录，手机与电脑均可直接观看。
+
+网页包含完整镜头播放、四张关键分镜、六项动效拆解、慢放时间轴和图层开关。点击「分享镜头」可复制保留当前时刻、选中动效、速度及图层状态的链接。
+
+网页通过 GitHub Pages 从 `main` 分支根目录发布，更新 `index.html` 后推送到该分支即可自动更新。`.nojekyll` 保留原始静态文件。示意分镜位于 `assets/shots/`，动效变化后也需重新截取。
+
 ## 直接预览
 
 下载仓库后，双击根目录 `index.html`。页面及示意素材全部保存在仓库内，离线打开无需安装依赖。
@@ -44,7 +52,10 @@ npm run render  # 导出到 renders/portrait-card.mp4，30 fps，无声
 ## 代码结构
 
 ```text
-index.html                       交互预览与播放控制
+index.html                       在线镜头展示、交互预览与分享
+assets/shots/                    四张插画分镜
+assets/favicon.svg               网页图标
+.nojekyll                        GitHub Pages 静态发布配置
 effect-data.json                 六项动效说明、时间、建议参数及代码片段
 render-project/index.html        可编辑、可渲染的合成主体
 render-project/index.motion.json 动效出现时刻断言
