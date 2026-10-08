@@ -1,0 +1,68 @@
+{
+  "duration": 9,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#forest-orbit-person",
+      "bySec": 0.1
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#forest-orbit-label",
+      "bySec": 6
+    },
+    {
+      "kind": "keepsMoving",
+      "withinSelector": ".fo-photos",
+      "maxStaticSec": 0.8
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-01"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-02"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-03"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-04"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-05"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-06"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-07"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-08"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-09"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-10"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-11"
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#forest-orbit-card-12"
+    }
+  ]
+}

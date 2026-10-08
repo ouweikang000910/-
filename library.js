@@ -66,7 +66,7 @@
   }
   observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.src=entry.target.dataset.src;observer.unobserve(entry.target);}},{rootMargin:'200px'});
   document.querySelectorAll('.card video[data-src]').forEach(v=>observer.observe(v));
-  const featured=items.find(i=>i.sample)||items[0];$('#spotlight').hidden=!featured;
+  const featured=items.find(i=>i.path===cfg.featured)||items.find(i=>i.sample)||items[0];$('#spotlight').hidden=!featured;
   if(featured){
    $('#featured-title').textContent=featured.title;$('#featured-desc').textContent=featured.description||'从你的镜头库中选取一个片段，打开预览即可查看细节。';
    const isVideo=!featured.cover&&featured.type==='video';$('#featured-cover').hidden=isVideo;$('#featured-video').hidden=!isVideo;

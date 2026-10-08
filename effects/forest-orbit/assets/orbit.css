@@ -1,0 +1,18 @@
+/* Shared by the deterministic composition and the offline interactive viewer. */
+.fo-host{
+  --fo-frame:#f6f5e9;
+  --fo-shadow:rgba(12,23,12,.38);
+  --fo-ink:#263328;
+  --fo-label:#fafbf2;
+  --fo-accent:#587950;
+  position:relative;width:100%;height:100%;overflow:hidden;
+  background:#172218;font-family:system-ui,sans-serif;
+}
+.fo-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.fo-space{position:absolute;inset:0;width:100%;height:100%;perspective:900px;perspective-origin:640px 360px;transform-style:preserve-3d}
+.fo-world,.fo-photos{position:absolute;inset:0;width:100%;height:100%;transform-style:preserve-3d}
+.fo-person{position:absolute;left:416px;top:121px;width:459px;height:700px;display:block;object-fit:contain;transform-style:preserve-3d;pointer-events:none}
+.fo-card{position:absolute;left:640px;top:360px;width:166px;height:104px;box-sizing:border-box;padding:3px;border-radius:1px;background:var(--fo-frame);box-shadow:0 3px 8px var(--fo-shadow);transform-style:preserve-3d;backface-visibility:visible;will-change:transform;pointer-events:none}
+.fo-photo{display:block;width:100%;height:100%;background-repeat:no-repeat;background-size:400% 300%;background-color:var(--fo-accent);overflow:hidden;backface-visibility:visible}
+.fo-label{position:absolute;left:429px;top:90px;width:211px;height:34px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 10px;box-sizing:border-box;border-radius:8px;background:var(--fo-label);color:var(--fo-ink);box-shadow:0 3px 12px var(--fo-shadow);font-size:17px;letter-spacing:-.25px;font-weight:550;opacity:0;white-space:nowrap;pointer-events:none}
+.fo-label-mark{flex:none;display:flex;align-items:center;justify-content:center;width:17px;height:17px;color:var(--fo-accent);font-size:20px;line-height:1}

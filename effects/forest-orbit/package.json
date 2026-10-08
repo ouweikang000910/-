@@ -1,0 +1,11 @@
+{
+  "name": "forest-photo-orbit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "npx --yes hyperframes@0.8.139 preview --background",
+    "check": "npx --yes hyperframes@0.8.139 check .",
+    "render": "npx --yes hyperframes@0.8.139 render . --quality delivery --fps 30 --output renders/forest-orbit.mp4"
+  },
+  "description": "森林照片环绕：可交互预览和可编辑的9秒3D照片环绕动效"
+}

@@ -1,0 +1,34 @@
+{
+  "category":"lower-thirds",
+  "category_extension":"Reference motion: source-style label plus custom spatial photo orbit",
+  "duration_s":9,"fps":30,"canvas":{"w":1280,"h":720,"aspect":"16:9"},
+  "style":"Photographic reconstruction of the supplied forest photo-ring effect. Static seated person, twelve white frames, continuous perspective orbit, genuine foreground occlusion. No app chrome or captions.",
+  "palette":["#172218","#263328","#587950","#f6f5e9","#fafbf2"],
+  "font":"system-ui","beats":[0,5.6,5.92,9],"export":"mp4",
+  "asset_needs":[
+    {"role":"background","kind":"image","source":"assets/forest.png","treatment":"none"},
+    {"role":"hero","kind":"image","source":"assets/person.png","treatment":"cutout"},
+    {"role":"photos","kind":"image","source":"assets/photos.png","treatment":"none"}
+  ],
+  "block":"three-orbiting-cards",
+  "customize":{
+    "runtime":"Retain the installed primitive's paused GSAP state + pure render adapter; adapt its orbit geometry to CSS3D photo planes for offline playback and native alpha occlusion.",
+    "count":12,"radius_x":360,"radius_y":116,"radius_z":300,"perspective":900,
+    "center":{"x":640,"y":386},"period_seconds":6,
+    "label":{"text":"the-meta colorize","at":5.6,"duration":0.32},"camera":"locked"
+  },
+  "content":{
+    "name":"the-meta colorize","role":"reference effect label","position":"above-left of head",
+    "brand_colors":["#263328","#fafbf2"],
+    "spatial_overlay":{
+      "asset":"assets/person.png",
+      "affordance":"The person's alpha silhouette is a fixed z=0 occluder inside the photo orbit.",
+      "center":{"x":640,"y":386},"extent":{"x0":180,"y0":230,"x1":1100,"y1":665},
+      "sequence":[
+        {"start":0,"end":5.6,"motion":"Continuous ring: depth scale, ellipse, yaw and alpha occlusion."},
+        {"start":5.6,"end":5.92,"motion":"Small white label enters while ring continues."},
+        {"start":5.92,"end":9,"motion":"Label holds; ring completes approximately 1.5 revolutions."}
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+素材生成：OpenAI imagegen 内置工具，2026-10-08。
+输入：参考录屏4.3秒关键帧（背景、人物）；新建图集（照片）。
+输出：forest.png / person.png（透明） / photos.png。
+
+背景提示词：
+Create a clean background plate for recreating the supplied video frame. Keep the exact photorealistic forest setting, tall vertical tree trunks, lush green woods, sun rays entering from upper left, ground and path, original framing and lighting. Remove the man entirely, remove every floating rectangular photo card and white border, remove ALL app interface, Chinese text, captions, comments, search bar, icons and watermarks. Seamlessly reconstruct the forest behind the removed elements. Landscape widescreen 16:9 composition, no text, no humans, no floating cards. This is a clean photographic background, not an illustration.
+
+人物提示词：
+Extract only the SAME man from this reference frame into a photorealistic transparent PNG cutout. Preserve his actual face, short dark hair, skin, gray T-shirt, black backpack straps, sunglasses clipped to collar, seated posture, arm position, phone, dark pants. Keep him facing the camera as seen in reference. Remove all forest, trees, floating white-bordered photo cards, all app interface, Chinese captions, search box, comments, icons. Cleanly reconstruct his gray shirt, arms and pants where floating cards obscure them, keeping anatomy natural. Include entire visible seated figure from head to upper thighs, centered, with no cropping of head or arms. Transparent background, no text, no props other than original backpack, sunglasses and phone, no new person, no illustration. The person should fill most of the image height with small transparent margins.
+
+照片图集提示词：
+A perfectly aligned 4-column by 3-row grid containing exactly 12 DIFFERENT photorealistic landscape nature photographs. Each cell has a 16:9 aspect ratio, overall sheet aspect ratio 64:27. No gaps, no padding, no borders, no text, no labels. Twelve close-up and landscape photos from the same lush green pine forest at golden hour: 1 fern fronds, 2 pine trunks and sunbeams, 3 green leaves with dew, 4 forest trail, 5 moss-covered stone, 6 pine needles closeup, 7 green forest canopy, 8 small creek in forest, 9 golden light on leaves, 10 distant green woodland hills, 11 tiny white wildflowers, 12 shadowy deep green trees. Vary compositions clearly. Natural realistic photography with deep greens and warm sunlight, no people, no collage effects beyond the precise rectangular grid.

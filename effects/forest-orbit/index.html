@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280,height=720">
+  <title>森林照片环绕 · 动效复刻</title>
+  <link rel="stylesheet" href="assets/orbit.css">
+  <script src="assets/gsap.min.js"></script>
+  <script src="assets/orbit.js"></script>
+  <style>
+    html,body{margin:0;width:1280px;height:720px;overflow:hidden;background:#172218}
+    #stage{position:relative;width:100%;height:100%;overflow:hidden}
+    .clip{position:absolute;inset:0;width:100%;height:100%}
+  </style>
+</head>
+<body>
+  <div data-hf-id="hf-fh3h" id="stage" data-composition-id="forest-orbit" data-start="0" data-duration="9" data-fps="30" data-width="1280" data-height="720">
+    <div data-hf-id="hf-y4at" id="forest-scene" class="clip" data-start="0" data-duration="9" data-track-index="0"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({paused:true});
+    const orbit = ForestOrbit.create(document.getElementById('forest-scene'), {
+      assetBase:'assets/', id:'forest-orbit', timeline:tl
+    });
+    window.__timelines = window.__timelines || {};
+    window.__timelines['forest-orbit'] = tl;
+    window.__forestOrbit = orbit;
+    window.__forestOrbitReady = true;
+    tl.seek(0, false);
+  </script>
+</body>
+</html>

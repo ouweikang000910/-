@@ -80,3 +80,10 @@ scripts/serve.mjs                无第三方依赖的本机静态预览服务
 已验证离线预览、时间定位、0.25 倍慢放、分层开关、初始/转场/最终状态，以及合成的静态、运行时、布局、动效和文字对比度检查。
 
 第三方组件说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+
+## 002 · 森林照片环绕
+
+[交互动效预览](https://ouweikang000910.github.io/-/effects/forest-orbit/viewer.html) · [复刻 MP4](https://ouweikang000910.github.io/-/shots/%E6%A3%AE%E6%9E%97%E7%85%A7%E7%89%87%E7%8E%AF%E7%BB%95-%E5%A4%8D%E5%88%BB.mp4)
+
+9 秒、1280×720、30 fps，12 张白边照片在人物前后环绕。支持时间轴、慢放、分层开关和替换照片。人物和森林参考原片关键帧生成重建；人物采用静态前景层。代码与素材位于 `effects/forest-orbit/`，原录屏仅保留在本地对照。

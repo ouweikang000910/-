@@ -8,6 +8,9 @@
     "dev": "node scripts/serve.mjs",
     "check": "npx --yes hyperframes@0.8.139 check render-project",
     "studio": "npx --yes hyperframes@0.8.139 preview render-project --background",
-    "render": "npx --yes hyperframes@0.8.139 render render-project --quality delivery --fps 30 --output renders/portrait-card.mp4"
+    "render": "npx --yes hyperframes@0.8.139 render render-project --quality delivery --fps 30 --output renders/portrait-card.mp4",
+    "check:forest": "npx --yes hyperframes@0.8.139 check effects/forest-orbit",
+    "studio:forest": "npx --yes hyperframes@0.8.139 preview effects/forest-orbit --background",
+    "render:forest": "npx --yes hyperframes@0.8.139 render effects/forest-orbit --quality delivery --fps 30 --output renders/forest-orbit.mp4"
   }
 }
